@@ -1,3 +1,6 @@
+//! Видео - 1:00:20...1:42:30
+
+// Исходный массив объектов - база данных.
 const colors = [
   { hex: '#f44336', rgb: '244,67,54' },
   { hex: '#e91e63', rgb: '233,30,99' },
@@ -14,13 +17,19 @@ const colors = [
   { hex: '#607d8b', rgb: '96,125,139' },
 ];
 
+// Создаем переменную-ссылку на <div> присутствующий в HTML.
 const paletteContainer = document.querySelector('.js-palette');
+
+// Создаем переменную - строку с нужной разметкой, которую сгенерировал скрипт.
 const cardsMarkup = createColorCardsMarkup(colors);
 
+// Вставляем разметку в DOM
 paletteContainer.insertAdjacentHTML('beforeend', cardsMarkup);
 
+// "Вешаем слушателя на "paletteContainer" и задаем ссылку на колл-бек функцию выполняемую при регистрации этого события
 paletteContainer.addEventListener('click', onPaletteContainerClick);
 
+// Функция автоматической генерации разметки на основе исходного массива объектов и заданного шаблона тегов.
 function createColorCardsMarkup(colors) {
   return colors
     .map(({ hex, rgb }) => {
@@ -42,6 +51,7 @@ function createColorCardsMarkup(colors) {
     .join('');
 }
 
+// Колл-бек функция события 
 function onPaletteContainerClick(evt) {
   const isColorSwatchEl = evt.target.classList.contains('color-swatch');
 
@@ -57,10 +67,12 @@ function onPaletteContainerClick(evt) {
   setBodyBgColor(swatchEl.dataset.hex);
 }
 
+// Функция изменения свойств "body"
 function setBodyBgColor(color) {
   document.body.style.backgroundColor = color;
 }
 
+// Функция удаления вспомогательного (.is-active) CSS класса с предыдущей активной карточки.
 function removeActiveCardClass() {
   const currentActiveCard = document.querySelector('.color-card.is-active');
 
@@ -69,6 +81,12 @@ function removeActiveCardClass() {
   }
 }
 
+// Функция добавления вспомогательного (.is-active) CSS класса на активную карточку.
 function addActiveCardClass(card) {
   card.classList.add('is-active');
 }
+
+
+//! "element.parentNode" - свойство, которое возвращает родителя "element" в DOM дереве, т.е. родительский элемент на один уровень вложенности назад. Дополнительно см. - https://developer.mozilla.org/ru/docs/Web/API/Node/parentNode
+
+//! element.closest('[CSS-селектор]') возвращает ближайший родительский элемент (или сам элемент), который соответствует заданному "CSS-селектору" или "null", если таковых элементов вообще нет.
