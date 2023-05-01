@@ -11,6 +11,6 @@ Educational work with "Front-End"
 
 - chatty events (болтливые события);
 - приёмы throttle и debounce с lodash;
-- ленивая загрузка изображений:
+- ленивая загрузка изображений(https://web.dev/native-lazy-loading):
   - нативная с атрибутом loading;
   - библиотека lazysizes.
