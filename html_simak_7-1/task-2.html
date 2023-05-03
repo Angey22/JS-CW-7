@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task-2</title>
+    <style>
+      body {
+        position: relative;
+      }
+
+      .modal {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+
+        display: flex;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+        width: 200px;
+        height: 50px;
+        background-color: aqua;
+      }
+
+      .modal__text {
+        margin: 0;
+      }
+
+      img {
+        box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+          0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
+      }
+
+      img.is-active {
+        transform: perspective(400px) rotateX(10deg);
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+
+        padding: 10px;
+        margin: 30px auto;
+        max-width: 1200px;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        outline: solid red 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <p><a href="/">На главную</a></p>
+    <hr />
+
+    <div class="container"></div>
+
+    <script src="/js_simak_7-1/task-2.js"></script>
+  </body>
+</html>
