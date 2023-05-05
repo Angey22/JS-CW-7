@@ -1,0 +1,84 @@
+<!-- Видео - 1:52:10...2:40:38 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Task-4</title>
+    <style>
+      form {
+        width: 200px;
+        margin-left: 50px;
+        text-align: center;
+      }
+
+      body {
+        height: 500vh;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      fieldset {
+        border-radius: 10px;
+        border-color: orange;
+        background-color: rgba(0, 0, 0, 0.239);
+      }
+
+      form label {
+        display: block;
+        margin: 10px;
+      }
+
+      form input {
+        display: block;
+        margin: 5px auto 0;
+        border-radius: 10px;
+        outline: none;
+        padding: 5px;
+        border-color: orange;
+      }
+
+      .wrong {
+        border-color: red;
+      }
+
+      .correct {
+        border-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <a href="/">На главную</a>
+      <em>/</em>
+      <a href="/js_simak_7-2/task-4.js" target="_blank">JS код - "task-4.js"</a>
+    </p>
+    <hr />
+
+    <form id="signInForm">
+      <fieldset>
+        <legend>Sign In</legend>
+        <label>
+          Enter your ligin
+          <input type="text" placeholder="Login" id="loginInput" />
+        </label>
+        <label>
+          Enter your password
+          <input type="password" placeholder="Password" id="passwordInput" />
+        </label>
+      </fieldset>
+    </form>
+
+    <!-- Подключаем библиотеку "lodash" -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+      integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Подключаем скрипт -->
+    <script src="/js_simak_7-2/task-4.js"></script>
+  </body>
+</html>

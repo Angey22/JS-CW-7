@@ -1,0 +1,71 @@
+<!-- Видео - 1:36:25...1:52:00 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Task-3</title>
+    <style>
+      p {
+        padding: 0;
+      }
+
+      body {
+        height: 500vh;
+        font-family: sans-serif;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .input {
+        display: inline-block;
+        margin: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <a href="/">На главную</a>
+      <em>/</em>
+      <a href="/js_simak_7-2/task-3.js" target="_blank">JS код - "task-3.js"</a>
+    </p>
+    <hr />
+
+    <div class="container">
+      <label class="input">
+        Enter text (Standart)
+        <input type="text" placeholder="Name" id="nameInputSt" />
+      </label>
+
+      <label class="input">
+        Enter text (Debounce - 1)
+        <input type="text" placeholder="Name" id="nameInputDb1" />
+        <p style="color: red">С настройками по умолчанию: { leading: false, trailing: true, }</p>
+      </label>
+    </div>
+
+    <label class="input">
+        Enter text (Debounce - 2)
+        <input type="text" placeholder="Name" id="nameInputDb2" />
+        <p style="color: red">С настройками: { leading: true, trailing: false, }</p>
+      </label>
+    </div>
+
+    <!-- Подключаем библиотеку "lodash" -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+      integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Подключаем скрипт -->
+    <script src="/js_simak_7-2/task-3.js"></script>
+  </body>
+</html>

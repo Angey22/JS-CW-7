@@ -1,0 +1,70 @@
+<!-- Видео - 1:08:40...1:29:00 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Task-1</title>
+    <style>
+      div,
+      span,
+      h2 {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        height: 1000vh;
+        font-family: sans-serif;
+      }
+
+      .container {
+        position: sticky;
+        top: 100px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .box {
+        margin: 10px;
+        padding: 10px 15px;
+
+        border: 3px solid orange;
+        border-radius: 8px;
+
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <a href="/">На главную</a>
+      <em>/</em>
+      <a href="/js_simak_7-2/task-1.js" target="_blank">JS код - "task-1.js"</a>
+    </p>
+    <hr />
+
+    <div class="container">
+      <h2>Scroll</h2>
+      <div class="box">Without Throttling: <span id="outputScrollStandart">0</span></div>
+
+      <div class="box">With Throttling: <span id="outputScrollThrottling">0</span></div>
+    </div>
+
+    <!-- Подключаем библиотеку "lodash" -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+      integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Подключаем скрипт -->
+    <script src="/js_simak_7-2/task-1.js"></script>
+  </body>
+</html>
