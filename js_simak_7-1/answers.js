@@ -50,11 +50,11 @@ console.log('"text.dataset.lang" =>', text.dataset.lang);
 
 // Примера 3
 //! Код для иллюстрации процесса погружения и последующего всплатия событий. Раскомментируй и кликни в браузере на область тега <p> и читай сообщения.
-// for (let elem of document.querySelectorAll('*')) {
-//     elem.addEventListener('click', (e) => alert(`Погружение: ${elem.tagName}`), true);
+for (let elem of document.querySelectorAll('*')) {
+    elem.addEventListener('click', (e) => alert(`Погружение: ${elem.tagName}`), true);
 
-//     elem.addEventListener('click', (e) => alert(`Всплытие: ${elem.tagName}`));
-// }
+    elem.addEventListener('click', (e) => alert(`Всплытие: ${elem.tagName}`));
+}
 
 //! Если в "addEventListener()" в качестве 3-го параметра поставить "true", то он будет отслеживать погружение, а не всплытие событий. По умолчанию, 3-й параметр "false", так как в основном обрабатываются ("ловятся") именно всплытия событий.
 
